@@ -4,6 +4,7 @@
     <!-- get some permissions -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -17,15 +18,13 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <!-- Music Service -->
-                <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-                <service android:name=".MusicService"
-                    android:label="Music Service" />
-                <receiver android:name=".MusicCompletionReceiver"/>
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Music Service -->
+        <service android:name=".MusicService"
+            android:label="Music Service" />
+        <receiver android:name=".MusicCompletionReceiver"/>
     </application>
 
 </manifest>

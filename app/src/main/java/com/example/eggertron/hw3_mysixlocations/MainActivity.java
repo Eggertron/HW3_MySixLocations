@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             startService(startMusicServiceIntent);
             isInitialized = true;
         }
-        musicBroadcastReceiver = new MusicCompletionReceiver(this);
+        musicBroadcastReceiver = new MusicCompletionReceiver();
         //musicBroadcastReceiver.SetMainActivity(this);
         //musicService = new MusicService();
         gpsManager = new GPSManager(this);
